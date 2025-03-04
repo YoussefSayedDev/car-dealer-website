@@ -27,7 +27,7 @@ model Classified {
   customers      Customer[]
   createdAt      DateTime         @default(now()) @map("crated_at")
   updatedAt      DateTime         @updatedAt @map("updated_at")
-  ModelVeriant   ModelVeriant?    @relation(fields: [modelVeriantId], references: [id])
+  ModelVeriant   ModelVariant?    @relation(fields: [modelVeriantId], references: [id])
 
   @@index([makeId, modelId], name: "index_make_model")
   @@index([status], name: "index_status")

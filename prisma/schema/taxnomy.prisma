@@ -15,7 +15,7 @@ model Model {
   name          String
   makeId        String         @map("make_id")
   make          Make           @relation(fields: [makeId], references: [id], onDelete: Cascade)
-  modelVeriants ModelVeriant[]
+  modelVariants ModelVariant[]
   classifieds   Classified[]
   createdAt     DateTime       @default(now()) @map("crated_at")
   updatedAt     DateTime       @updatedAt @map("updated_at")
@@ -24,7 +24,7 @@ model Model {
   @@map("models")
 }
 
-model ModelVeriant {
+model ModelVariant {
   id          String       @id @default(cuid())
   name        String
   modelId     String       @map("model_id")
@@ -37,5 +37,5 @@ model ModelVeriant {
   updatedAt DateTime @updatedAt @map("updated_at")
 
   @@unique([modelId, name])
-  @@map("model_veriants")
+  @@map("model_variants")
 }
