@@ -1,0 +1,111 @@
+{
+	"editor.fontSize": 18,
+	"editor.fontFamily": "'Fira Code', Consolas, 'Courier New', monospace",
+	"editor.fontLigatures": true,
+	"editor.lineHeight": 26,
+	"editor.cursorBlinking": "expand",
+	"editor.wordWrap": "on",
+	"editor.tabSize": 2,
+	"editor.formatOnSave": true,
+	"editor.unicodeHighlight.invisibleCharacters": false,
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+
+	"workbench.iconTheme": "material-icon-theme",
+	"workbench.colorTheme": "Slack Theme Dark Mode",
+	"workbench.startupEditor": "none",
+
+	"explorer.confirmDelete": false,
+	"explorer.confirmPasteNative": false,
+	"explorer.confirmDragAndDrop": false,
+
+	"debug.onTaskErrors": "debugAnyway",
+	"security.workspace.trust.untrustedFiles": "newWindow",
+
+	"typescript.updateImportsOnFileMove.enabled": "always",
+	"javascript.updateImportsOnFileMove.enabled": "always",
+
+	"editor.codeActionsOnSave": {
+		"source.organizeImports": "explicit"
+	},
+
+	"[javascript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[javascriptreact]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[typescriptreact]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[json]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[jsonc]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[css]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[html]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[php]": {
+		"editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
+	},
+	"[prisma]": {
+		"editor.defaultFormatter": "Prisma.prisma"
+	},
+
+	"terminal.integrated.fontSize": 15,
+	"terminal.integrated.defaultProfile.windows": "Windows PowerShell",
+	"terminal.integrated.profiles.windows": {
+		"PowerShell": {
+			"source": "PowerShell",
+			"icon": "terminal-powershell"
+		},
+		"Command Prompt": {
+			"path": [
+				"${env:windir}\\Sysnative\\cmd.exe",
+				"${env:windir}\\System32\\cmd.exe"
+			],
+			"args": [],
+			"icon": "terminal-cmd"
+		},
+		"Git Bash": {
+			"source": "Git Bash"
+		},
+		"Ubuntu (WSL)": {
+			"path": "C:\\Windows\\System32\\wsl.exe",
+			"args": ["-d", "Ubuntu"]
+		},
+		"bash (MSYS2)": {
+			"path": "C:\\msys64\\usr\\bin\\bash.exe",
+			"args": ["--login", "-i"],
+			"env": {
+				"CHERE_INVOKING": "1"
+			}
+		},
+		"Windows PowerShell": {
+			"path": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
+		}
+	},
+
+	"notebook.formatOnSave.enabled": true,
+
+	"prettier.jsxSingleQuote": true,
+
+	"supermaven.enable": {
+		"*": true,
+		"cpp": false
+	},
+
+	"typescript.inlayHints.parameterNames.enabled": "literals",
+	"javascript.inlayHints.parameterNames.enabled": "literals",
+	"javascript.inlayHints.parameterTypes.enabled": true,
+	"typescript.inlayHints.parameterTypes.enabled": true,
+
+	"python.defaultInterpreterPath": "C:\\Users\\Youssef\\AppData\\Local\\Programs\\Python\\Python313\\python.exe"
+}
