@@ -1,0 +1,25 @@
+model Customer {
+  id            String              @id @default(cuid())
+  firstName     String
+  lastName      String
+  email         String              @unique
+  mobile        String
+  bookingDate   DateTime
+  termsAccepted Boolean             @default(false) @map("terms_accepted")
+  status        CustomerStatus      @default(INTERESTED)
+  classifiedId  String              @map("classified_id")
+  classified    Classified          @relation(fields: [classifiedId], references: [id], onDelete: Cascade)
+  lifecycle     CustomerLifecycle[]
+  createdAt     DateTime            @default(now()) @map("crated_at")
+  updatedAt     DateTime            @updatedAt @map("updated_at")
+
+  @@map("customers")
+}
+
+enum CustomerStatus {
+  SUBSCRIBED
+  INTERESTED
+  CONTACTED
+  PURACHERD
+  COLD
+}

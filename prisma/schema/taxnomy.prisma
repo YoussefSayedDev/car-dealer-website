@@ -1,0 +1,41 @@
+model Make {
+  id          String       @id @default(cuid())
+  name        String       @unique
+  image       String
+  models      Model[]
+  classifieds Classified[]
+  createdAt   DateTime     @default(now()) @map("crated_at")
+  updatedAt   DateTime     @updatedAt @map("updated_at")
+
+  @@map("makes")
+}
+
+model Model {
+  id            String         @id @default(cuid())
+  name          String
+  makeId        String         @map("make_id")
+  make          Make           @relation(fields: [makeId], references: [id], onDelete: Cascade)
+  modelVeriants ModelVeriant[]
+  classifieds   Classified[]
+  createdAt     DateTime       @default(now()) @map("crated_at")
+  updatedAt     DateTime       @updatedAt @map("updated_at")
+
+  @@unique([makeId, name])
+  @@map("models")
+}
+
+model ModelVeriant {
+  id          String       @id @default(cuid())
+  name        String
+  modelId     String       @map("model_id")
+  yearStart   Int
+  yearEnd     Int
+  model       Model        @relation(fields: [modelId], references: [id], onDelete: Cascade)
+  classifieds Classified[]
+
+  createdAt DateTime @default(now()) @map("crated_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@unique([modelId, name])
+  @@map("model_veriants")
+}
