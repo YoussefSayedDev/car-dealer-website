@@ -127,7 +127,7 @@ export async function seedTaxnomy(prisma: PrismaClient) {
     insertFunction: (batch: TUpsertArgs[]) => Promise<void>,
   ) {
     for (let i = 0; i < items.length; i += batchSize) {
-      const batch = items.slice(i, i * batchSize);
+      const batch = items.slice(i, i + batchSize);
       await insertFunction(batch);
     }
   }

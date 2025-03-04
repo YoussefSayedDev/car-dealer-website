@@ -11,7 +11,7 @@
 	"editor.defaultFormatter": "esbenp.prettier-vscode",
 
 	"workbench.iconTheme": "material-icon-theme",
-	"workbench.colorTheme": "Slack Theme Dark Mode",
+	"workbench.colorTheme": "Dark",
 	"workbench.startupEditor": "none",
 
 	"explorer.confirmDelete": false,
