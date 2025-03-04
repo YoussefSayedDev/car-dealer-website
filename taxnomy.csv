@@ -1,0 +1,37 @@
+category,subcategory,make,model
+Sedan,Compact Sedan,Honda,Civic
+Sedan,Compact Sedan,Toyota,Corolla
+Sedan,Midsize Sedan,Honda,Accord
+Sedan,Midsize Sedan,Toyota,Camry
+Sedan,Luxury Sedan,Mercedes-Benz,E-Class
+Sedan,Luxury Sedan,BMW,5 Series
+SUV,Compact SUV,Honda,CR-V
+SUV,Compact SUV,Toyota,RAV4
+SUV,Midsize SUV,Honda,Pilot
+SUV,Midsize SUV,Toyota,Highlander
+SUV,Luxury SUV,Mercedes-Benz,GLE
+SUV,Luxury SUV,BMW,X5
+Truck,Compact Truck,Toyota,Tacoma
+Truck,Compact Truck,Ford,Ranger
+Truck,Full-size Truck,Ford,F-150
+Truck,Full-size Truck,Chevrolet,Silverado
+Hatchback,Subcompact Hatchback,Honda,Fit
+Hatchback,Subcompact Hatchback,Toyota,Yaris
+Hatchback,Compact Hatchback,Volkswagen,Golf
+Hatchback,Compact Hatchback,Mazda,Mazda3
+Sports Car,Luxury Sports Car,Porsche,911
+Sports Car,Luxury Sports Car,Ferrari,488
+Sports Car,Muscle Car,Ford,Mustang
+Sports Car,Muscle Car,Chevrolet,Camaro
+Electric,Electric Sedan,Tesla,Model 3
+Electric,Electric SUV,Tesla,Model Y
+Electric,Electric Luxury Sedan,Lucid,Air
+Electric,Electric Luxury SUV,Rivian,R1S
+Hybrid,Hybrid Sedan,Toyota,Prius
+Hybrid,Hybrid SUV,Toyota,RAV4 Hybrid
+Hybrid,Plug-in Hybrid,Toyota,Prius Prime
+Hybrid,Plug-in Hybrid,Ford,Escape PHEV
+Van,Minivan,Honda,Odyssey
+Van,Minivan,Toyota,Sienna
+Van,Cargo Van,Ford,Transit
+Van,Cargo Van,Mercedes-Benz,Sprinter
