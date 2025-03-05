@@ -1,12 +1,13 @@
 import { PrismaClient } from "@prisma/client";
-import { seedClassified } from "./classified.seed";
+import { seedImages } from "./images.seed";
 
 const prisma = new PrismaClient();
 
 async function main() {
   // await prisma.$executeRaw`TRUNCATE TABLE "makes", "models" RESTART IDENTITY CASCADE;`;
   // await seedTaxnomy(prisma);
-  await seedClassified(prisma);
+  // await seedClassified(prisma);
+  await seedImages(prisma);
 }
 
 main()
