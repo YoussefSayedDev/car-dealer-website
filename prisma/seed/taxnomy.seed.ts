@@ -10,7 +10,7 @@ type Row = {
   yearEnd: number;
 };
 
-const BATCH_SIZE = 100;
+const BATCH_SIZE = 50; // Reduced from 100 to put less pressure on the connection pool
 
 export async function seedTaxnomy(prisma: PrismaClient) {
   const rows = await new Promise<Row[]>((resolve, reject) => {
@@ -120,7 +120,6 @@ export async function seedTaxnomy(prisma: PrismaClient) {
       );
     }
   }
-
   async function insertInBatches<TUpsertArgs>(
     items: TUpsertArgs[],
     batchSize: number,
@@ -129,9 +128,10 @@ export async function seedTaxnomy(prisma: PrismaClient) {
     for (let i = 0; i < items.length; i += batchSize) {
       const batch = items.slice(i, i + batchSize);
       await insertFunction(batch);
+      // Add a delay between batches to prevent connection pool exhaustion
+      await new Promise((resolve) => setTimeout(resolve, 100));
     }
   }
-
   await insertInBatches<Prisma.Prisma__ModelClient<unknown, unknown>>(
     modelPromises,
     BATCH_SIZE,

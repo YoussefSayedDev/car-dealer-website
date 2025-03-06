@@ -41,7 +41,7 @@ export default function RootLayout({
       >
         <NuqsAdapter>{children}</NuqsAdapter>
         <NextTopLoader showSpinner={false} />
-        <Toaster />
+        <Toaster theme="system" />
       </body>
     </html>
   );
